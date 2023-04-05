@@ -1,22 +1,16 @@
 <?xml version="1.0"?>
 <PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="GitHubPlugin">
-  <Id>TODO: github-user/project-name</Id>
-  <GroupId>TODO: github-user/project-name</GroupId>
-  <FriendlyName>TODO: BuildFreedom</FriendlyName>
-  <Author>TODO: Author Name</Author>
-  <Commit>TODO: Git commit hash</Commit>
-  <SourceDirectories>
-    <Directory>ClientPlugin</Directory>
-  </SourceDirectories>
-  <Tooltip>TODO: Short description</Tooltip>
-  <Description>TODO: Long description, multiple lines.
+	<Id>KlimeSE/BuildFreedom</Id>
 
-FriendlyName: How your plugin will show up in the Plugins list.
+	<!-- The name of your plugin that will appear in the list. -->
+	<FriendlyName>Build Freedom</FriendlyName>
 
-This text is shown on the right side in the plugin details panel in a scrollable text box.
+	<!-- The author name that you want to appear in the list. -->
+	<Author>Klime</Author>
 
-You can use links here, players can click on them! For example add a Discord invite.
+	<!-- Optional tag that adds a tooltip to the plugin in-game. -->
+	<Tooltip>Build tools for SE. Currently: Paste freedom</Tooltip>
 
-Don't touch the SourceDirectories, unless you rename or consolidate your projects inside the solution.
-  </Description>
+	<!-- The commit id. You can find this in the commits list: https://github.com/austinvaness/ToolSwitcherPlugin/commits/main -->
+	<Commit>8aaf51aab48e2cab06c7c4cfad0a613f269cc198</Commit>
 </PluginData>

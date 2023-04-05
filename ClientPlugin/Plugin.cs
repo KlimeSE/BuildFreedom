@@ -37,8 +37,8 @@ namespace ClientPlugin
 
             Log.Info("Loading");
 
-            var configPath = Path.Combine(MyFileSystem.UserDataPath, ConfigFileName);
-            config = PersistentConfig<PluginConfig>.Load(Log, configPath);
+            //var configPath = Path.Combine(MyFileSystem.UserDataPath, ConfigFileName);
+            //config = PersistentConfig<PluginConfig>.Load(Log, configPath);
 
             if (!PatchHelpers.HarmonyPatchAll(Log, new Harmony(Name)))
             {
@@ -116,9 +116,9 @@ namespace ClientPlugin
 
 
         // ReSharper disable once UnusedMember.Global
-        public void OpenConfigDialog()
+        /*public void OpenConfigDialog()
         {
             MyGuiSandbox.AddScreen(new MyPluginConfigDialog());
-        }
+        }*/
     }
 }
