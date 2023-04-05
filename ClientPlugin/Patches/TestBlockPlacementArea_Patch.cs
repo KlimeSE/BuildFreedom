@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Sandbox.Definitions;
 using Sandbox.Game.Entities;
+using Sandbox.Game.Multiplayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
