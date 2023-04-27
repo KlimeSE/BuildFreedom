@@ -7,4 +7,4 @@ Building tools for SE
 
 ## Server Information
 
-- This plugin is not required serverside.
+- This plugin is required serverside for the plugin to work in multiplayer. (Coming Soon)
