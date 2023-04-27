@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Sandbox.Game.Multiplayer;
 using Sandbox.Game.Screens.Helpers;
+using Sandbox.Game.World;
 using Sandbox.Graphics.GUI;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace ClientPlugin.Patches
 
         private static void Postfix(MyGuiScreenBase __instance)
         {
-            if (Sync.MultiplayerActive)
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
             {
                 return;
             }

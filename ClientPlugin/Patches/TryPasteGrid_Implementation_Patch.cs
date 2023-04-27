@@ -27,7 +27,7 @@ namespace ClientPlugin.Patches
     {
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            if (Sync.MultiplayerActive)
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
             {
                 return instructions;
             }

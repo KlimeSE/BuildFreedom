@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Sandbox.Game.Multiplayer;
 using Sandbox.Game.SessionComponents;
+using Sandbox.Game.World;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace ClientPlugin.Patches
     {
         private static void Postfix(MySessionComponentVoxelHand __instance)
         {
-            if (Sync.MultiplayerActive)
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
             {
                 return;
             }

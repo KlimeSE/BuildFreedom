@@ -24,7 +24,7 @@ namespace ClientPlugin.Patches
     {
         private static void Postfix(MyGuiScreenAdminMenu __instance)
         {
-            if (Sync.MultiplayerActive)
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
             {
                 return;
             }

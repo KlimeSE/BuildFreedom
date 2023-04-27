@@ -2,6 +2,7 @@
 using Sandbox.Definitions;
 using Sandbox.Game.Entities;
 using Sandbox.Game.Multiplayer;
+using Sandbox.Game.World;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace ClientPlugin.Patches
 
         private static bool Prefix(ref bool __result)
         {
-            if (Sync.MultiplayerActive)
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserOwner(Sync.MyId))
             {
                 return true;
             }
