@@ -539,6 +539,7 @@
     <Compile Include="Patches\TestVoxelPlacement_Patch.cs" />
     <Compile Include="Patches\TryPasteGrid_Implementation_Patch.cs" />
     <Compile Include="Patches\UpdateWeatherInfo_Patch.cs" />
+    <Compile Include="Patches\UpdateWeathersOnClient_Patch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

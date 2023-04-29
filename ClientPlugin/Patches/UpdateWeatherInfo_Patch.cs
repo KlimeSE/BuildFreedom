@@ -40,7 +40,13 @@ namespace ClientPlugin.Patches
             {
                 if (__instance.Controls.GetControlByName("weatherinfo") != null)
                 {
-                    (__instance.Controls.GetControlByName("weatherinfo") as MyGuiControlMultilineText).Text = new StringBuilder("Weather is disabled.");
+                    if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
+                    {
+                        (__instance.Controls.GetControlByName("weatherinfo") as MyGuiControlMultilineText).Text = new StringBuilder("Weather is disabled.");
+                    }
+                    else {
+                        (__instance.Controls.GetControlByName("weatherinfo") as MyGuiControlMultilineText).Text = new StringBuilder("Weather is disabled. If the server has\nweather on, the server will still have\nweather on, but you won't see it.");
+                    }
                 }
                 return false;
             }

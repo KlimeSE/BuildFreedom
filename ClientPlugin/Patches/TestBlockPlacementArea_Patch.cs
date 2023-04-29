@@ -32,7 +32,7 @@ namespace ClientPlugin.Patches
 
         private static bool Prefix(ref bool __result)
         {
-            if (Sync.MultiplayerActive && !MySession.Static.IsUserOwner(Sync.MyId))
+            if (Sync.MultiplayerActive && !MySession.Static.IsUserAdmin(Sync.MyId))
             {
                 return true;
             }
